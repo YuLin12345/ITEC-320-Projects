@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<!-- ******************************************************* -->
+<!-- Project 1 -->
+<!-- Document Name: Project1.html -->
+<!-- Author: Yu Lin -->
+<!-- Date Created: 09/19/2017 -->
+<!-- Date Updated: 09/30/2017 - Fixed CSS -->
+<!-- Description: This is NYIT's Fall 17' ITEC 320 project 1. -->
+<!-- The purpose is to make an art gallery webpage with image on the right page -->
+<!-- and a table (top) and form (bottom) on the left of the page. -->
+<!-- The form will have inputs, which users can use to submit (register) -->
+<!-- so they can register for their desired group that they want to join. -->
+<!-- ******************************************************* -->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project 1</title>
+
+    <!-- CSS -->
+    <style>
+        body {
+            background-color: #CCFF00;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+
+        #caption {
+            float: left;
+            position: absolute;
+            top: 20px;
+            left: 400px;
+        }
+
+        #image {
+            float: right;
+            margin-top: -80px;
+            margin-left: 950px;
+        }
+
+        table, #form {
+            float: left;
+            margin-top: 150px;
+            width: 32%;
+            height: 60%;
+            background-color: #CCFF00;
+            top: 250px;
+            left: 400px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            padding: 3px;
+        }
+
+        div {
+            display: inline;
+            position: absolute;
+            top: 200px;
+            left: 110px;
+        }
+
+        #footer {
+            position: absolute;
+            top: 840px;
+            left: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Caption -->
+    <div id="caption">
+        <h1><strong>Select Your Group and Register to be a Member Today</strong></h1>
+    </div>
+
+    <!-- Image -->
+    <div id="image">
+        <img src="project1_image.PNG" name="image" />
+    </div>
+
+    <!-- Tables -->
+    <table cellpadding="3" cellspacing="3" border="0">
+        <tr>
+            <td colspan="4" align="center" bgcolor="#99FFFF"><font color="#FF0000"><strong>Gallery List</strong></font></td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="#CACACA"></td>
+            <td align="center" bgcolor="#CACACA"><font color="#0702FD"><strong>Group 1</strong></font></td>
+            <td align="center" bgcolor="#CACACA"><font color="#0702FD"><strong>Group 2</strong></font></td>
+            <td align="center" bgcolor="#CACACA"><font color="#0702FD"><strong>Group 3</strong></font></td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="#FFFFFF"><strong>Mon</strong></td>
+            <td align="left" bgcolor="#FFFFFF">10-11 am</td>
+            <td align="left" bgcolor="#FFFFFF">2-3 pm</td>
+            <td align="left" bgcolor="#FFFFFF">4-5 pm</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="#F1F1F1"><strong>Tue</strong></td>
+            <td align="left" bgcolor="#F1F1F1">5-7 pm</td>
+            <td align="left" bgcolor="#F1F1F1">4-5 pm</td>
+            <td align="left" bgcolor="#F1F1F1">6-7 pm</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="#FFFFFF"><strong>Wed</strong></td>
+            <td align="left" bgcolor="#FFFFFF">9-10 am</td>
+            <td align="left" bgcolor="#FFFFFF">7-8 pm</td>
+            <td align="left" bgcolor="#FFFFFF">3-5 pm</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="#F1F1F1"><strong>Group Size:</strong></td>
+            <td align="left" bgcolor="#F1F1F1">8</td>
+            <td align="left" bgcolor="#F1F1F1">10</td>
+            <td align="left" bgcolor="#F1F1F1">12</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="#CACACA" style="color:#0702FD"><strong>Status per Group</strong></td>
+            <td align="center" bgcolor="#CACACA" style="color:#0702FD">Closed</td>
+            <td align="center" bgcolor="#CACACA" style="color:#0702FD">Open</td>
+            <td align="center" bgcolor="#CACACA" style="color:#0702FD">Closed</td>
+        </tr>
+    </table>
+
+
+    <!-- Input fields -->
+    <div id="form">
+        <form>
+            <strong>
+                <label>First name:</label>	<input style="width: 180px" type="text" name="fname" placeholder="First name"><br>
+                <label>Last name:</label>	<input style="width: 180px" type="text" name="lanme" placeholder="Last name"><br>
+                <label>Email:</label>		<input style="width: 180px" type="text" name="email" placeholder="Your_email@nyit.edu"><br>
+                <label>Address:</label>		<input style="width: 180px" type="text" name="address" placeholder="Your Address"><br>
+                <label>City:</label>		<input style="width: 180px" type="text" name="city" placeholder="City"><br>
+                <label>State:</label>		<input style="width: 180px" type="text" name="state" placeholder="State"><br>
+                <label>Zip code:</label>	<input style="width: 180px" type="text" name="zipcode" placeholder="Zip Code"><br>
+                <label>Phone:</label>		<input style="width: 180px" type="text" name="phone" placeholder="Phone Number"><br>
+            </strong>
+            <div>
+                <strong>
+                    <input style="width: 90px" type="button" name="register" value="Register">
+                    <input style="width: 90px" type="button" name="reset" value="Reset">
+                </strong>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <footer>
+            <center>
+                <p>--------------------------------------------------------------------------------------------</p>
+                <p>Copyright © Yu Lin Fall 2017</p>
+            </center>
+        </footer>
+    </div>
+</body>
+
+</html>

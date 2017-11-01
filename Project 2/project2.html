@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<!-- ******************************************************* -->
+<!-- Project 2 -->
+<!-- Document Name: project2.html -->
+<!-- Author: Yu Lin -->
+<!-- Date Created: 10/06/2017 -->
+<!-- Date Updated: 10/13/2017 - Fixed CSS -->
+<!-- Description: This is NYIT's Fall 17' ITEC 320 project 2. -->
+<!-- The purpose is to make an art gallery webpage. Image on the left with a NYIT foreground, top left cornor. -->
+<!-- On the right side, a blinking text, under it a scroll-textbox with image follow by text -->
+<!-- and right below the textbox, title, and paragraph. -->
+<!-- On the bottom, a circle picture follow by text right next to it. -->
+<!-- ******************************************************* -->
+
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #FFFF99;
+        }
+
+        #image1 {
+            float: left;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        #image2 {
+            float: left;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+
+        #img_title {
+            float: left;
+            position: absolute;
+            left: 140px;
+            top: 170px;
+        }
+
+        #blinker_shape {
+            float: right;
+            position: absolute;
+            right: 0px;
+            top: 50px;
+            height: 100px;
+            width: 1200px;
+            background-color: #C1D176;
+        }
+
+        #blink {
+            animation: 3s blinker linear infinite;
+            -webkit-animation: 3s blinker linear infinite;
+            -moz-animation: 3s blinker linear infinite;
+            padding: 20px;
+        }
+
+        @keyframes blinker {
+            0% {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.0;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
+        }
+
+        @-moz-keyframes blinker {
+            0% {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.0;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
+        }
+
+        @-webkit-keyframes blinker {
+            0% {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.0;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
+        }
+
+        #scroll_textbox {
+            float: right;
+            position: absolute;
+            right: 480px;
+            top: 200px;
+            height: 100px;
+            width: 720px;
+            border: 0px solid #CCC;
+            overflow: scroll;
+            background-color: #F3F1BF;
+            font-size: 18px;
+        }
+
+        #middle_p {
+            display: inline;
+            float: right;
+            position: absolute;
+            right: 145px;
+            top: 330px;
+            font-size: 18px;
+        }
+
+        #last_p {
+            display: inline;
+            float: left;
+            position: absolute;
+            left: 20px;
+            top: 550px;
+            font-size: 22px;
+        }
+
+        #footer {
+            position: absolute;
+            top: 900px;
+            left: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Part 1 -->
+    <div id="part1">
+        <img id="image1" src="pic1.png" height="500" width="370" />
+        <img id="image2" src="pic2.png" height="50" width="50" />
+        <h1 id="img_title"><strong><font color="red">NYIT Art Gallery</font></strong></h1>
+    </div>
+
+    <!-- Part 2 -->
+    <div id="part2">
+        <div id="blinker_shape">
+            <div id="blink">
+                <center><font size="7"><font color="FFFF99">NYIT Artists and Artwork Home</font></font></center>
+            </div>
+        </div>
+
+        <div id="scroll_textbox">
+            <img id="image3" align="left" style="padding: 6px" src="pic3.png" height="130" width="150" />
+            <div><br />Founded in 1984 by an artist, Agora Gallery is a contemporary art gallery dedicated to the promotion of national and international artists seeking exposure to the New York art market. Agora Gallery connects artists with professionals, art collectors, and other artists to create an ever growing family dedicated to the world of fine art.</div>
+        </div>
+
+        <div id="middle_p">
+            <h2><strong>The Portrait of Mademoiselle Caroline Riviere was painted in 1806</strong></h2>
+            <p>Breaking with Realism is a group exhibition that explores 18 artists’ respective insights on themes of spirituality, humanity, and the natural world. <br /> Through a variety of mediums, the exhibition considers how dynamic arrangements of color, texture, line, and <br /> composition can impact the visceral nature of the human experience.</p>
+        </div>
+    </div>
+
+    <!-- Part 3 -->
+    <div id="part3">
+        <div id="last_p">
+            <img id="image4" src="pic4.png" height="150" width="150" align="left" />
+            <p>The Chelsea International Fine Art Competition is an ideal way to gain valuable exposure for your artwork and exhibit your talent to a wider international audience. The Chelsea International Fine Art Competition is an excellent opportunity to foster your talent and develop the résumé of a successful professional artist. With a distinguished panel of jurors and more than $70,000 in valuable prizes, the 2018 Chelsea International Fine Art Competition is an event not to be missed.</p>
+            <p>The International Fine Art Competition is an ideal way to gain valuable exposure for your artwork and exhibit your talent to a wider international audience. The Chelsea International Fine Art Competition is an excellent opportunity to foster your talent and develop the résumé of a successful professional artist. With a distinguished panel of jurors and more than $70,000 in valuable prizes, the 2018 Chelsea International Fine Art Competition is an event not to be missed.</p>
+        </div>
+    </div>
+
+    <!-- Part 4 -->
+    <div id="part4">
+        <div id="footer">
+            <center><footer><i>Copyright © Yu Lin NYIT Fall 2017</i></footer></center>
+        </div>
+    </div>
+</body>
+
+</html>

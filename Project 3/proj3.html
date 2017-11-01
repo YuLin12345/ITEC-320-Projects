@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- ******************************************************* -->
+<!-- Project 3 -->
+<!-- Document Name: proj3.html -->
+<!-- Author: Yu Lin -->
+<!-- Date Created: 10/20/2017 -->
+<!-- Date Updated: 10/23/2017 - Fixed CSS and JS -->
+<!-- Description: This is NYIT's Fall 17' ITEC 320 project 3. -->
+<!-- The purpose is to make an art gallery webpage. The webpage will include javascript. -->
+<!-- On the top of the page, a form where user types in the artists group and last show date, which will display how many days before the event. -->
+<!-- On the center, list of artists and descriptions about it. -->
+<!-- On the bottom, footer with mailto element. -->
+<!-- ******************************************************* -->
+
+<html>
+<head>
+    <title>Project 3</title>
+    <link rel="stylesheet" type="text/css" href="proj3css.css" />
+    <script type="text/javascript" src="proj3js.js"></script>
+</head>
+
+<body>
+    <div name="part1">
+        <form>
+            <h1><font color="#0000FF">Currently Showing Graphic Arts LTD.</font></h1>
+
+            <label>Artists Group: </label> <input type="text" name="artist" /> <br /> <br />
+            <label>Last Show <br />Date: </label> <input type="text" name="date" /> <br /> <br />
+            <label>&nbsp;</label> <input type="button" name="countdown" value="Countdown!" onclick="changeText()" /> <br /> <br />
+            <center><p id="text"></p></center><br />
+        </form>
+    </div>
+
+    <div name="part2">
+        <table>
+            <tr>
+                <td align="center" bgcolor="#CCAA66"><strong>Artists Group one</strong></td>
+                <td bgcolor="#CCAA66">Curated specifically for creative professional.</td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Artists Group two</strong></td>
+                <td>Recently Sold: Patricia Queiruga, Isabel Conde, and Oliwa Bukea.</td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#CCAA66"><strong>Artists Group three</strong></td>
+                <td bgcolor="#CCAA66">Art. Bring Your Home To Life. Affordable art fair.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div name="part3" id="footer">
+        <footer>
+            <center>
+                <i>Copyright © Yu Lin NYIT Fall 2017</i> <br />
+                <a href="mailto:ylin22@nyit.edu" target="_top">ylin22@nyit.edu</a>
+            </center>
+        </footer>
+    </div>
+</body>
+</html>

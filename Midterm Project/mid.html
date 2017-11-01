@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!-- ******************************************************* -->
+<!-- Midterm Project -->
+<!-- Document Name: mid.html -->
+<!-- Author: Yu Lin -->
+<!-- Date Created: 10/31/2017 -->
+<!-- Date Updated: 10/31/2017 - Fixed CSS -->
+<!-- Description: This is NYIT's Fall 17' ITEC 320 midterm project. -->
+<!-- The purpose is to make an art gallery webpage. The webpage will include javascript. -->
+<!-- On the top of the page, it will have a sliding text coming from right to left. -->
+<!-- Right below it, a button named "Select Style" that will change the background color of the div below it to lightblue. -->
+<!-- Under the button, a div with two paragraph tag. Below that a sliding text with image, going from left to right. -->
+<!-- ******************************************************* -->
+
+<html>
+<head>
+    <title>Midterm Project</title>
+    <style>
+        body {
+            background: #FFFE9D;
+        }
+
+        #part1 {
+            color: #FF0A06;
+            margin: auto;
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+        #part2 {
+            margin: auto;
+            margin-top: 60px;
+            margin-left: 0px;
+        }
+
+        #part3 {
+            margin: auto;
+            margin-top: 80px;
+            margin-left: 0px;
+        }
+
+        #part4 {
+            color: #0000FF;
+            margin: auto;
+            margin-top: 90px;
+            margin-right: 0px;
+        }
+
+        #part5 {
+            margin: auto;
+            margin-top: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="mid-min.js" type="text/javascript"></script>
+
+    <div id="part1">
+        <marquee behavior="slide" direction="left">
+            <h1>Using Machine Learning on Web Development</h1>
+        </marquee>
+    </div>
+
+
+    <div id="part2"></div>
+    <button onclick="gal.addStyle('#part3', 'background-color', '#ADD8E6')">Select Style</button>
+
+    <div id="part3">
+        <center>
+            <p><font color="#007C12"><font size="5"><strong>NYIT Art Gallery Show</strong></font></font></p>
+            <p><font size="3">Gallery Show is Starting Now! Do not wait. Select your best Art now!</font></p>
+        </center>
+    </div>
+
+    <div id="part4">
+        <marquee behavior="slide" direction="right">
+            <h2>Last Chance to buy! Price Only $1487.95</h2>
+            <img src="mid.png" height="300" width="300" alt="image" />
+        </marquee>
+    </div>
+
+    <div id="part5">
+        <footer>
+            <center>
+                <p>--------------------------------------------------------------------------------------------</p>
+                <p><em>Copyright © Yu Lin Fall 2017</em></p>
+            </center>
+        </footer>
+    </div>
+</body>
+</html>
