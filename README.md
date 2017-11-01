@@ -1,5 +1,3 @@
-ITEC-320 Web-Based Multimedia Development I
-
 ITEC-320 Web-Based Multimedia Development I projects coded in HTML/CSS/Javascript
 #
 Status: <b>Under Development</b>
