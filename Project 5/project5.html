@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!-- ******************************************************* -->
+<!-- Project 5 -->
+<!-- Document Name: project5.html -->
+<!-- Author: Yu Lin -->
+<!-- Date Created: 11/25/2017 -->
+<!-- Date Updated: 11/30/2017 - Fixed JS -->
+<!-- Description: This is NYIT's Fall 17' ITEC 320 project 5. -->
+<!-- The purpose is to make a page with JQuery. -->
+<!-- On the top of the page, we have the header. Right next to it, on the right a input box for calendar date that the user picks. -->
+<!-- Under the header, we have a table that changes background color when you hover over it. -->
+<!-- At the very bottom, a picture. -->
+<!-- ******************************************************* -->
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="project5.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <script src="project5.js"></script>
+
+    <p>Select your Artists, Year, Label, and check in and out dates</p>
+
+    <div name="calendar" id="calendar">
+        <label>From</label>
+        <input type="text" id="fromDatePicker" />
+        <label>to</label>
+        <input type="text" id="toDatePicker" />
+    </div>
+
+    <div name="table" id="table">
+        <table cellspacing="0" cellpadding="5">
+            <tr>
+                <th align="center" bgcolor="#626975"><strong><font color="#FFFFFF">Artists</font></strong></th>
+                <th align="center" bgcolor="#626975"><strong><font color="#FFFFFF">Year</font></strong></th>
+                <th align="center" bgcolor="#626975"><strong><font color="#FFFFFF">Label</font></strong></th>
+            </tr>
+            <tr>
+                <td>Maria Cory</td>
+                <td>2011</td>
+                <td>City</td>
+            </tr>
+            <tr bgcolor="#C2C8D4">
+                <td>John Smith</td>
+                <td>2013</td>
+                <td>Town</td>
+            </tr>
+            <tr>
+                <td>Hardery David</td>
+                <td>2014</td>
+                <td>State</td>
+            </tr>
+            <tr bgcolor="#C2C8D4">
+                <td>Bon Mart</td>
+                <td>20145</td>
+                <td>City</td>
+            </tr>
+            <tr>
+                <td>Help!</td>
+                <td>2010</td>
+                <td>Countery</td>
+            </tr>
+            <tr bgcolor="#C2C8D4">
+                <td>Sam Runny</td>
+                <td>1995</td>
+                <td>State</td>
+            </tr>
+            <tr>
+                <td>Remsy Olver</td>
+                <td>1998</td>
+                <td>Town</td>
+            </tr>
+            <tr bgcolor="#C2C8D4">
+                <td>Susana Brandy</td>
+                <td>2012</td>
+                <td>City</td>
+            </tr>
+            <tr>
+                <td>Margert Myssery</td>
+                <td>2015</td>
+                <td>Capitol</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer><img src="pic.png" height="400" width="1910" /></footer>
+</body>
+</html>

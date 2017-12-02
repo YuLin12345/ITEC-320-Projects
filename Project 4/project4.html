@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+
+<!-- ******************************************************* -->
+<!-- Project 4 -->
+<!-- Document Name: project4.html -->
+<!-- Author: Yu Lin -->
+<!-- Date Created: 11/13/2017 -->
+<!-- Date Updated: 11/14/2017 - Fixed JS -->
+<!-- Description: This is NYIT's Fall 17' ITEC 320 project 4. -->
+<!-- The purpose is to make a page with canvas, so we can draw. The webpage will include javascript. -->
+<!-- On the top of the page, we have a canvas and a background. -->
+<!-- On the bottom, we have three buttons, draw, circle, and signature. -->
+<!-- Draw lets the user draw, circle will draw circle on the screen, depending where they click, and signature will let them input in the textfield. -->
+<!-- ******************************************************* -->
+
+<html>
+<head>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #canvas {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        button {
+            background-color: #69b0f8;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var canvas, context,
+            flag = false,
+            dot_flag = false,
+            currX = 0,
+            currY = 0,
+            prevX = 0,
+            prevY = 0;
+
+        function main_Draw() {
+
+            canvas = document.getElementById("canvas");
+            context = canvas.getContext("2d");
+            w = canvas.width;
+            h = canvas.height;
+
+            canvas, addEventListener("mousemove", function (e) {
+                getPostion("move", e)
+            }, false);
+
+            canvas, addEventListener("mousedown", function (e) {
+                getPostion("down", e)
+            }, false);
+
+            canvas, addEventListener("mouseup", function (e) {
+                getPostion("up", e)
+            }, false);
+
+            canvas, addEventListener("mouseout", function (e) {
+                getPostion("out", e)
+            }, false);
+        }
+
+        function main_Circle() {
+
+            canvas = document.getElementById("canvas");
+            context = canvas.getContext("2d");
+            w = canvas.width;
+            h = canvas.height;
+
+            canvas, addEventListener("click", function (e) {
+                getPostion("click", e)
+            }, false);
+        }
+
+        function draw() {
+            context.beginPath();
+            context.moveTo(prevX, prevY);
+            context.lineTo(currX, currY);
+            context.strokeStyle = "blue";
+            context.lineWidth = "2";
+            context.stroke();
+            context.closePath();
+        }
+
+        function circle() {
+            context.beginPath();
+            context.strokeStyle = "blue";
+            context.arc(currX, currY, 50, 0, 2 * Math.PI);
+            context.stroke();
+            context.closePath();
+        }
+
+        function getPostion(res, e) {
+
+            if (res == 'click') {
+                prevX = currX;
+                prevY = currY;
+                currX = e.clientX - canvas.offsetLeft;
+                currY = e.clientY - canvas.offsetTop;
+                circle();
+            }
+
+            if (res == 'down') {
+                prevX = currX;
+                prevY = currY;
+                currX = e.clientX - canvas.offsetLeft;
+                currY = e.clientY - canvas.offsetTop;
+
+                flag = true;
+                dot_flag = true;
+
+                if (dot_flag) {
+                    context.beginPath();
+                    context.fillStyle = "blue";
+                    context.fillRect(currX, currY, 2, 2);
+                    context.closePath();
+                    dot_flag = false;
+                }
+            }
+
+            if (res == 'up' || res == 'out') {
+                flag = false;
+            }
+
+            if (res == 'move') {
+                if (flag) {
+                    prevX = currX;
+                    prevY = currY;
+                    currX = e.clientX - canvas.offsetLeft;
+                    currY = e.clientY - canvas.offsetTop;
+                    draw();
+                }
+            }
+        }
+    </script>
+
+    <img name="image" src="pic.png" />
+
+    <canvas id="canvas" width="1915" height="900"></canvas>
+
+    <button type="submit" name="draw" onclick="main_Draw()" value="Draw">Draw</button>
+    <button type="submit" name="circle" onclick="main_Circle()" value="Circle">Circle</button>
+    <button type="submit" name="signature" onclick="signature()" value="Signature">Signature</button>
+    <input type="text" name="text" value="" />
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    background: #CC99FF;
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    margin: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+#calendar {
+    margin: auto;
+    margin-right: 150px;
+    margin-top: 0px;
+    float: right;
+}
+
+#table {
+    margin: auto;
+    margin-left: 1px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+tr:hover {
+    background-color: #8797B7;
+}
+
+footer {
+    position: center;
+    margin-top: 195px;
+    padding: 5px;
+    width: 600px;
+    height: 100px;
+}
